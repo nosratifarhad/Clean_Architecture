@@ -7,16 +7,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\src\CleanArchitecture.Application\CleanArchitecture.Application.csproj" />
-		<ProjectReference Include="..\src\CleanArchitecture.Domain\CleanArchitecture.Domain.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<Folder Include="Configuration\" />
 		<Folder Include="Extensions\" />
 		<Folder Include="Interceptor\" />
 		<Folder Include="Migrations\" />
 		<Folder Include="UnitOfWork\" />
 	</ItemGroup>
+
 
 </Project>
