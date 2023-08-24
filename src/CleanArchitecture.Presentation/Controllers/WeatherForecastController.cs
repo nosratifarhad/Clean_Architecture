@@ -1,3 +1,4 @@
+using CleanArchitecture.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchitecture.Presentation.Controllers
