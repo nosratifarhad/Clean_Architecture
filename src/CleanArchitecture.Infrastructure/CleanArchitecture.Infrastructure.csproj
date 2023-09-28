@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <Folder Include="EmailProviders\" />
-    <Folder Include="SMSProviders\" />
   </ItemGroup>
 
 </Project>
