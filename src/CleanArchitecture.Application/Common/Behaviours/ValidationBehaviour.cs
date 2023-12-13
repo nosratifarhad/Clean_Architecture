@@ -1,5 +1,4 @@
-﻿using ValidationException = CleanArchitecture.Application.Common.Exceptions.ValidationException;
-using FluentValidation;
+﻿using FluentValidation;
 using MediatR;
 
 namespace CleanArchitecture.Application.Common.Behaviours;
