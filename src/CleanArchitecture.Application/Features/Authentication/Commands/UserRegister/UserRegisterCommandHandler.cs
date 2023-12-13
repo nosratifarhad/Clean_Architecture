@@ -36,7 +36,7 @@ public class UserRegisterCommandHandler : IRequestHandler<UserRegisterCommand, i
                 await _userReadRepository.GetExistUserByUserNameAsync(userName, cancellationToken)
                 .ConfigureAwait(false);
 
-        if (!isExistUserName)
+        if (isExistUserName)
             throw new ValidationException("UserName Is Already Exist.");
     }
 

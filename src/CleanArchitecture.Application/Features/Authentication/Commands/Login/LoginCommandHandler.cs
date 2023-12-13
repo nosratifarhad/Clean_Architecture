@@ -10,7 +10,6 @@ public class LoginCommandHandler : IRequestHandler<LoginCommand, string>
 {
     private readonly IUserWriteRepository _userWriteRepository;
     private readonly IUserReadRepository _userReadRepository;
-    //private readonly IJwtProvider jwtProvider;
 
     public LoginCommandHandler(IUserWriteRepository userWriteRepository,
         IUserReadRepository userReadRepository)
@@ -25,10 +24,11 @@ public class LoginCommandHandler : IRequestHandler<LoginCommand, string>
 
         var userState = CreateUserState(userDto);
 
-
         await _userWriteRepository.ChangeUserLoginStateAsync(userState, cancellationToken).ConfigureAwait(false);
 
-        return "";
+        var token = await GetToken(userDto).ConfigureAwait(false);
+
+        return token;
     }
 
     #region [ Private ]
@@ -43,6 +43,11 @@ public class LoginCommandHandler : IRequestHandler<LoginCommand, string>
             throw new ValidationException("UserName Is Not Exist.");
 
         return userDto;
+    }
+
+    private async Task<string> GetToken(UserDto userDto)
+    {
+        return await Task.Run(() => "eyJhbSflKxwRJSMeK.adQssw5cMeJf36POk6yJV.KF2QT4fwp");
     }
 
     private UserState CreateUserState(UserDto userDto)
