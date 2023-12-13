@@ -1,5 +1,8 @@
 ﻿namespace CleanArchitecture.Domain.Common;
 
-internal class BaseEntity
+public abstract class BaseEntity
 {
+    public int Id { get; set; }
+
+    public Guid guid { get; set; }
 }
