@@ -4,7 +4,7 @@ using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace OnionArchitecture.Application.Features;
+namespace CleanArchitecture.Application;
 
 public static class ConfigureServices
 {
