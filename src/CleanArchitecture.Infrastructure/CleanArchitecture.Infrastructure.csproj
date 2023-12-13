@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CleanArchitecture.Application\CleanArchitecture.Application.csproj" />
+    <Folder Include="EmailProviders\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="EmailProviders\" />
+    <ProjectReference Include="..\CleanArchitecture.Application\CleanArchitecture.Application.csproj" />
   </ItemGroup>
 
 </Project>

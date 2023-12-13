@@ -4,7 +4,7 @@ namespace CleanArchitecture.Domain.Users.Dtos;
 
 public class UserDto
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public Gender Gender { get; set; }
     public string Email { get; set; }
 }

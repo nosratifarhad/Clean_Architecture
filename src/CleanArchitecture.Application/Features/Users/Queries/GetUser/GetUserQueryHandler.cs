@@ -13,7 +13,9 @@ public class GetUserQueryHandler : IRequestHandler<GetUserQuery, GetUserDto>
 
     public async Task<GetUserDto> Handle(GetUserQuery request, CancellationToken cancellationToken)
     {
-        var result = await _userReadRepository.GetByIdAsync(request.Id).ConfigureAwait(false);
+        var result =
+            await _userReadRepository.GetByIdAsync(request.Id, cancellationToken)
+            .ConfigureAwait(false);
 
         var getUserDto = CreateUserDto(result);
 
